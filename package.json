@@ -1,0 +1,5 @@
+{
+  "name":"cordova-plugin-google-tag-manager",
+  "version":"0.1.0",
+  "cordova":{"id":"cordova-plugin-google-tag-manager","platforms":["android","ios"]}
+}
