@@ -1,17 +1,19 @@
 <?xml version="1.0"?>
 <plugin id="cordova-plugin-google-tag-manager" version="0.1.0"
- xmlns="http://apache.org/cordova/ns/plugins/1.0">
-<name>GoogleTagManager</name>
-<js-module src="www/TagManager.js" name="TagManager"><clobbers target="TagManager"/></js-module>
-<platform name="android">
-<framework src="com.google.android.gms:play-services-tagmanager:18.3.0" />
-</platform>
-<platform name="ios">
-<podspec>
-<pods>
-<pod name="GoogleTagManager" spec="~> 9.1"/>
-</pods>
-</podspec>
-</platform>
-<hook type="after_plugin_install" src="hooks/copyContainer.js"/>
+    xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>GoogleTagManager</name>
+    <js-module src="www/TagManager.js" name="TagManager">
+        <clobbers target="TagManager" />
+    </js-module>
+    <platform name="android">
+        <framework src="com.google.android.gms:play-services-tagmanager:18.3.0" />
+    </platform>
+    <platform name="ios">
+        <podspec>
+            <pods>
+                <pod name="GoogleTagManager" spec="~> 9.1" />
+            </pods>
+        </podspec>
+    </platform>
+    <hook type="after_plugin_install" src="hooks/copyContainer.js" />
 </plugin>
