@@ -14,10 +14,10 @@ const configs = {
 };
 
 module.exports=function(ctx){
-  console.log("Copy GTM container hook placeholder");
+  console.log("Copy GTM container hook placeholder - projRoot: " + ctx.opts.projectRoot);
 
-  fs.copyFileSync("/resources/container/GTM-KLBN64W6.json", "/platforms/android/app/src/main/assets/containers/GTM-KLBN64W6.json");
-  fs.copyFileSync("/resources/container/GTM-KLBN64W6.json", "/platforms/ios/container/GTM-KLBN64W6.json");
+  fs.copyFileSync("/resources/container/GTM-KLBN64W6.json", ctx.opts.projectRoot + "/platforms/android/app/src/main/assets/containers/GTM-KLBN64W6.json");
+  fs.copyFileSync("/resources/container/GTM-KLBN64W6.json", ctx.opts.projectRoot + "/platforms/ios/container/GTM-KLBN64W6.json");
   
   
 };
