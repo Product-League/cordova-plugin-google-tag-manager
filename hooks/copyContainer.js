@@ -14,15 +14,16 @@ const configs = {
 };
 
 module.exports=function(ctx){
-  console.log("Copy GTM container hook placeholder");
-  const projectRoot = ctx.opts.projectRoot;
-  const pluginRoot = path.resolve(path.dirname(ctx.scriptLocation), "..");
-console.log("projectRoot: " + projectRoot);
-console.log("pluginRoot: " + pluginRoot);
+      console.log("Copy GTM container hook placeholder");
+      const projectRoot = ctx.opts.projectRoot;
+      const pluginRoot = path.resolve(path.dirname(ctx.scriptLocation), "..");
+      console.log("projectRoot: " + projectRoot);
+      console.log("pluginRoot: " + pluginRoot);
       console.log(ctx); 
-  fs.copyFileSync(ctx.opts.projectRoot + "/resources/container/GTM-KLBN64W6.json", ctx.opts.projectRoot + "/platforms/android/app/src/main/assets/containers/GTM-KLBN64W6.json");
-  fs.copyFileSync(ctx.opts.projectRoot + "/resources/container/GTM-KLBN64W6.json", ctx.opts.projectRoot + "/platforms/ios/container/GTM-KLBN64W6.json");
-  
+      console.log("Android src folder: " + ctx.opts.pluginRoot + "/platforms/android/app/src");
+      console.log("iOS folder: " + ctx.opts.pluginRoot + "/platforms/ios");
+      fs.copyFileSync(ctx.opts.pluginRoot + "/resources/container/GTM-KLBN64W6.json", ctx.opts.pluginRoot + "/platforms/android/app/src/main/assets/container/GTM-KLBN64W6.json");
+      fs.copyFileSync(ctx.opts.pluginRoot + "/resources/container/GTM-KLBN64W6.json", ctx.opts.pluginRoot + "/platforms/ios/container/GTM-KLBN64W6.json");
   
 };
 
