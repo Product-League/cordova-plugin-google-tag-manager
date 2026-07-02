@@ -18,7 +18,7 @@ module.exports=function(ctx){
       const projectRoot = ctx.opts.projectRoot;
       const pluginRoot = path.resolve(path.dirname(ctx.scriptLocation), "..");
       console.log("BADRUZ!");
-      listFolders(pluginRoot)
+      listFolders(projectRoot)
       fs.copyFileSync(pluginRoot + "/resources/container/GTM-KLBN64W6.json", pluginRoot + "/platforms/android/app/src/main/assets/container/GTM-KLBN64W6.json");
       fs.copyFileSync(pluginRoot + "/resources/container/GTM-KLBN64W6.json", pluginRoot + "/platforms/ios/container/GTM-KLBN64W6.json");
   
@@ -31,10 +31,10 @@ function moveGSFiles(oldPath, newPath){
 function listFolders(foldersPath) {
     const files = fs.readdirSync(foldersPath);
     files.forEach(folder => {
-        console.log(folder);
+        console.log("Folder - " + folder);
         const dirFiles = fs.readdirSync(foldersPath + folder);
         dirFiles.forEach(file => {
-            console.log(file)
+            console.log("File - " + file)
         })
     })
 }
