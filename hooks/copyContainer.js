@@ -21,10 +21,8 @@ module.exports = function (ctx) {
     [
         "",
         "plugins",
+        "plugins/cordova-plugin-google-tag-manager",
         "platforms",
-        "platforms/android",
-        "platforms/android/app",
-        "platforms/android/app/src",
         "platforms/ios"
     ].forEach(dir => {
         const fullPath = path.join(projectRoot, dir);
@@ -39,9 +37,7 @@ module.exports = function (ctx) {
     });
 
 
-
-
-    fs.copyFileSync(pluginRoot + "/resources/container/GTM-KLBN64W6.json", pluginRoot + "/platforms/android/app/src/main/assets/container/GTM-KLBN64W6.json");
+    //fs.copyFileSync(pluginRoot + "/resources/container/GTM-KLBN64W6.json", pluginRoot + "/platforms/android/app/src/main/assets/container/GTM-KLBN64W6.json");
     fs.copyFileSync(pluginRoot + "/resources/container/GTM-KLBN64W6.json", pluginRoot + "/platforms/ios/container/GTM-KLBN64W6.json");
 
 };
