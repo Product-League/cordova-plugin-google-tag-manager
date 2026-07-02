@@ -38,9 +38,10 @@ module.exports = function (ctx) {
         }
     });
 
-
+    const dir_ios = "plugins/cordova-plugin-google-tag-manager/resources/container/GTM-KLBN64W6.json";
+    const dir_ios_dest = "platforms/ios/container/GTM-KLBN64W6.json";
     //fs.copyFileSync(pluginRoot + "/resources/container/GTM-KLBN64W6.json", pluginRoot + "/platforms/android/app/src/main/assets/container/GTM-KLBN64W6.json");
-    fs.copyFileSync(pluginRoot + "/resources/container/GTM-KLBN64W6.json", pluginRoot + "/platforms/ios/container/GTM-KLBN64W6.json");
+    fs.copyFileSync(path.join(projectRoot, dir_ios), path.join(projectRoot, dir_ios_dest));
 
 };
 
