@@ -18,10 +18,6 @@ module.exports = function (ctx) {
     const projectRoot = ctx.opts.projectRoot;
     const pluginRoot = path.resolve(path.dirname(ctx.scriptLocation), "..");
     console.log("BADRUZ!");
-
-
-    const projectRoot = ctx.opts.projectRoot;
-
     [
         "",
         "plugins",
