@@ -48,7 +48,7 @@ module.exports = function (ctx) {
     );
 
     const destination = path.join(
-        pluginRoot,
+        projectRoot,
         "platforms",
         "ios",
         "container",
