@@ -42,7 +42,6 @@ module.exports = function (ctx) {
     const source = path.join(
         pluginRoot,
         "resources",
-        "android",
         "container",
         "GTM-KLBN64W6.json"
     );
