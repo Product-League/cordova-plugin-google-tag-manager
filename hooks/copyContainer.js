@@ -17,10 +17,8 @@ module.exports=function(ctx){
       console.log("Copy GTM container hook placeholder");
       const projectRoot = ctx.opts.projectRoot;
       const pluginRoot = path.resolve(path.dirname(ctx.scriptLocation), "..");
-      console.log("projectRoot: " + projectRoot);
-      console.log("pluginRoot: " + pluginRoot);
-      console.log(ctx); 
-
+      console.log("BADRUZ!");
+      listFolders(pluginRoot)
       fs.copyFileSync(pluginRoot + "/resources/container/GTM-KLBN64W6.json", pluginRoot + "/platforms/android/app/src/main/assets/container/GTM-KLBN64W6.json");
       fs.copyFileSync(pluginRoot + "/resources/container/GTM-KLBN64W6.json", pluginRoot + "/platforms/ios/container/GTM-KLBN64W6.json");
   
@@ -29,3 +27,14 @@ module.exports=function(ctx){
 function moveGSFiles(oldPath, newPath){
     fs.copyFileSync(oldPath, newPath);
   }
+
+function listFolders(foldersPath) {
+    const files = fs.readdirSync(foldersPath);
+    files.forEach(folder => {
+        console.log(folder);
+        const dirFiles = fs.readdirSync(foldersPath + folder);
+        dirFiles.forEach(file => {
+            console.log(file)
+        })
+    })
+}
