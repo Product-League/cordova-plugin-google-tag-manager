@@ -17,7 +17,7 @@
         
         <framework src="com.google.android.gms:play-services-tagmanager:18.1.1" />
         
-        <resource-file src="resources/container/GTM-KLBN64W6.json" target="assets/containers/GTM-KLBN64W6.json" />
+        <resource-file src="resources/container/GTM-KK72SS5X.json" target="assets/containers/GTM-KK72SS5X.json" />
     </platform>
     <platform name="ios">
         <podspec>
