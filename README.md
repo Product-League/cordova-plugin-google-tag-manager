@@ -136,17 +136,6 @@ GoogleTagManager warning: No default container found.
 
 This usually indicates that the container JSON is missing from the application bundle.
 
-## Compatibility
-
-Current tested versions:
-
-| Component | Version |
-|----------|---------|
-| GoogleTagManager | 7.0.0 |
-| FirebaseAnalytics | 10.29.0 |
-| Cordova | 12+ |
-
-The iOS version of GoogleTagManager 7.0.0 is compatible with FirebaseAnalytics 10.29.0.
 
 ## Notes
 
